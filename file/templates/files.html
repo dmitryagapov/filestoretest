@@ -1,0 +1,37 @@
+{% extends 'main.html' %}
+
+{% block userfiles %}
+    <!-- Upload form. Note enctype attribute! -->
+    <h1> Личный кабинет </h1>
+    <form action="{% url 'file.views.user_files' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>{{ form.non_field_errors }}</p>
+        <p>{{ form.content.label_tag }} {{ form.content.help_text }}</p>
+        <p>
+            {{ form.content.errors }}
+            {{ form.content }}			</p>
+        <p><input type="submit" value="Upload" /></p>
+    </form>
+    <!-- List of uploaded documents -->
+    {% if files %}
+        {% for status in uploaded_file_status %}
+            <h3>{{ status }}</h3>
+        {% endfor %}
+        <ul>
+        {% for file in files %}
+            <li>
+                <a href="/file/uploaded_files/{{ file.file_hash }}/{{ file.file_name }}">{{ file.file_name }}</a>
+                <form action="/file/delete/{{ file.file_hash }}/" method="post">
+                    {% csrf_token %}
+                    <input class="button" type="submit" value="Удалить">
+                </form>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No files.</p>
+    {% endif %}
+
+{% endblock %}
+
+
