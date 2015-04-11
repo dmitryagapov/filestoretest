@@ -7,7 +7,7 @@ TEMPLATE_DEBUG = True
 
 DATABASES = settings.DATABASES
 
-TEMPLATE_DIRS = settings.TEMPLATE_DIRS
+
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
@@ -22,6 +22,13 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+TEMPLATE_DIRS = (
+    BASE_DIR + '/filestore/file/templates/',
+    BASE_DIR + '/filestore/templates/',
+    BASE_DIR + '/filestore/file/loginsys/templates/',
+
+)
 STATIC_ROOT = 'staticfiles'
 
 STATIC_URL = '/static/'
@@ -29,3 +36,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     ('static', 'C:/Users/Dmitry/DjangoProj/proj/filestore/static/'),
 )
+
+TEMPLATE_DIRS = settings.TEMPLATE_DIRS
