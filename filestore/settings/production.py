@@ -34,7 +34,7 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    ('static', 'C:/Users/Dmitry/DjangoProj/proj/filestore/static/'),
+    ('static', BASE_DIR + '/filestore/static/'),
 )
 
 TEMPLATE_DIRS = settings.TEMPLATE_DIRS
