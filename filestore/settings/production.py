@@ -1,16 +1,21 @@
 from django.conf import settings
 import os
 
-DATABASES = settings.DATABASES
+# DATABASES = settings.DATABASES
 DEBUG = False
 TEMPLATE_DEBUG = True
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 
-DATABASES['default'] =  dj_database_url.config()
-
-
+# DATABASES['default'] =  dj_database_url.config()
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
@@ -21,7 +26,7 @@ ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
