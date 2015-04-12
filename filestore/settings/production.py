@@ -36,5 +36,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     ('static', BASE_DIR + '/filestore/static/'),
 )
-
-TEMPLATE_DIRS = settings.TEMPLATE_DIRS
