@@ -1,7 +1,7 @@
-from django.conf import settins
+from django.conf import settings
 import os
 
-DATABASES = settins.DATABASES
+DATABASES = settings.DATABASES
 DEBUG = False
 TEMPLATE_DEBUG = True
 
