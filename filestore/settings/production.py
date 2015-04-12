@@ -9,7 +9,7 @@ TEMPLATE_DEBUG = True
 import dj_database_url
 
 # DATABASES['default'] =  dj_database_url.config()
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = settings.BASE_DIR
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -33,7 +33,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "templates"),
