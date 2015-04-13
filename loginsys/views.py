@@ -18,7 +18,7 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            request.session.set_expiry(600)
+            # request.session.set_expiry(600)
             request.session['user'] = username
             request.session['uploaded_file_status'] = ['Upload the file!']
             return redirect('/file/user/')
@@ -45,7 +45,7 @@ def register(request):
             newuser = auth.authenticate(username=newuser_form.cleaned_data['username'],
                                         password=newuser_form.cleaned_data['password2'])
             auth.login(request, newuser)
-            request.session.set_expiry(600)
+            # request.session.set_expiry(600)
             user_my = MyUser(user=User.objects.get(username=newuser_form.cleaned_data['username']))
             user_my.save()
             request.session['user'] = newuser_form.cleaned_data['username']
