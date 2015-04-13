@@ -4,16 +4,16 @@
     <div class="large-offset-3 large-6 columns">
         <form action="/auth/login/" method="post">
             {% csrf_token %}
-            <label for="username">Имя пользователя</label>
+            <label for="username">User name</label>
             <input type="text" name="username" id="username">
-            <label for="password">Пароль</label>
+            <label for="password">Password</label>
             <input type="password" name="password" id="password">
             {% if login_error %}
                 <label class="error">{{ login_error }}</label>
             {% endif %}
-            <input class="button" type="submit" value="Войти">
+            <input class="button" type="submit" value="Sign in">
             <div class="label round secondary">
-                <a href="/auth/register/">Регистрация</a>
+                <a href="/auth/register/">Registration</a>
             </div>
         </form>
     </div>

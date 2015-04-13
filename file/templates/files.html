@@ -23,7 +23,7 @@
                 <a href="/file/uploaded_files/{{ file.file_hash }}/{{ file.file_name }}">{{ file.file_name }}</a>
                 <form action="/file/delete/{{ file.file_hash }}/" method="post">
                     {% csrf_token %}
-                    <input class="button" type="submit" value="Удалить">
+                    <input class="button" type="submit" value="Delete">
                 </form>
             </li>
         {% endfor %}

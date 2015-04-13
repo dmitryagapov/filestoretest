@@ -23,7 +23,7 @@ def login(request):
             request.session['uploaded_file_status'] = ['Upload the file!']
             return redirect('/file/user/')
         else:
-            args['login_error'] = 'Пользователь не найден'
+            args['login_error'] = 'User with such login/password is not exist'
             return render_to_response('login.html', args)
     else:
         return render_to_response('login.html', args)
