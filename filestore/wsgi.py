@@ -23,8 +23,8 @@ except:
     pass
 
 
-try:
-    from whitenoise.django import DjangoWhiteNoise
-    application = DjangoWhiteNoise(application)
-except:
-    pass
+# try:
+#     from whitenoise.django import DjangoWhiteNoise
+#     application = DjangoWhiteNoise(application)
+# except:
+#     pass
