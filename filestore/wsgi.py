@@ -18,5 +18,13 @@ try:
     from dj_static import Cling
 
     application = Cling(get_wsgi_application())
+
+except:
+    pass
+
+
+try:
+    from whitenoise.django import DjangoWhiteNoise
+    application = DjangoWhiteNoise(application)
 except:
     pass

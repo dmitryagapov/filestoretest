@@ -26,7 +26,10 @@ ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    ('static', os.path.join(os.path.dirname(os.path.abspath(__file__)),'/filestore/static/')),
+)
 
