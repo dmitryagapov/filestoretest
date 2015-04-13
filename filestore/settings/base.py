@@ -28,9 +28,9 @@ ALLOWED_HOSTS = []
 
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT, '/filestore/file/templates/'),
-    os.path.join(PROJECT_ROOT, '/filestore/templates/'),
-    os.path.join(PROJECT_ROOT, '/filestore/file/loginsys/templates/'),
+    os.path.join(PROJECT_ROOT, '/file/templates/'),
+    os.path.join(PROJECT_ROOT, '/templates/'),
+    os.path.join(PROJECT_ROOT, '/file/loginsys/templates/'),
 
 )
 
