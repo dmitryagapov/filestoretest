@@ -4,7 +4,7 @@ import dj_database_url
 import whitenoise
 
 # DATABASES = settings.DATABASES
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = True
 
 PROJECT_DIRECTORY = os.getcwd()
