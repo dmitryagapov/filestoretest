@@ -2,14 +2,14 @@
 
 {% block userfiles %}
     <!-- Upload form. Note enctype attribute! -->
-    <h1> Личный кабинет </h1>
+    <h1> Personal page </h1>
     <form action="{% url 'file.views.user_files' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <p>{{ form.non_field_errors }}</p>
         <p>{{ form.content.label_tag }} {{ form.content.help_text }}</p>
         <p>
             {{ form.content.errors }}
-            {{ form.content }}			</p>
+            {{ form.content }}		</p>
         <p><input type="submit" value="Upload" /></p>
     </form>
     <!-- List of uploaded documents -->

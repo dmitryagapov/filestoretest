@@ -20,6 +20,8 @@ import logging
 import os
 import hashlib
 
+MAX_FILE_NUMBER = 100
+
 logger = logging.getLogger(__name__)
 
 
@@ -50,7 +52,7 @@ def user_files(request):
     try:
         user_user = User.objects.get(username=request.session['user'])
         user_my = MyUser.objects.get(user=user_user)
-        if request.method == 'POST':
+        if request.method == 'POST' and user_my.file_number <= MAX_FILE_NUMBER:
             form = FileForm(request.POST, request.FILES)
 
             if form.is_valid():
