@@ -1,6 +1,7 @@
 from django.conf import settings
 import os
 import dj_database_url
+import whitenoise
 
 # DATABASES = settings.DATABASES
 DEBUG = False
@@ -26,7 +27,7 @@ ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
 
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
