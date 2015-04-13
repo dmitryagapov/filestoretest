@@ -11,9 +11,9 @@ PROJECT_DIRECTORY = os.getcwd()
 # Parse database configuration from $DATABASE_URL
 
 
-DATABASES = {
-    'default': dj_database_url.config(),
-}
+# DATABASES = {
+#     'default': dj_database_url.config(),
+# }
 
 BASE_DIR = settings.BASE_DIR
 
