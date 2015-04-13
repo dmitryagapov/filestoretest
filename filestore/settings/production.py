@@ -30,16 +30,3 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-
-
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, "templates"),
-    # here you can add another templates directory if you wish.
-)
-
-STATIC_ROOT = os.path.join(PROJECT_DIRECTORY, 'static/')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    ('static', os.path.join(os.getcwd(), 'static/')),
-)

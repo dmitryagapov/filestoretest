@@ -28,9 +28,9 @@ ALLOWED_HOSTS = []
 
 
 TEMPLATE_DIRS = (
-    'C:/Users/Dmitry/DjangoProj/test_0/filestore/file/templates/',
-    'C:/Users/Dmitry/DjangoProj/test_0/filestore/templates/',
-    'C:/Users/Dmitry/DjangoProj/test_0/filestore/file/loginsys/templates/',
+    os.path.join(PROJECT_ROOT, '/filestore/file/templates/'),
+    os.path.join(PROJECT_ROOT, '/filestore/templates/'),
+    os.path.join(PROJECT_ROOT, '/filestore/file/loginsys/templates/'),
 
 )
 
@@ -96,6 +96,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    ('static', 'C:/Users/Dmitry/DjangoProj/test_0/filestore/static/'),
+    ('static', os.path.join(PROJECT_ROOT,'/filestore/static/')),
 )
 
