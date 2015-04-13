@@ -15,6 +15,6 @@ urlpatterns = patterns('',
     url(r'^auth/', include('loginsys.urls')),
     url(r'^', include('loginsys.urls')),
 )
-urlpatterns += patterns('',
-    url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
+# urlpatterns += patterns('',
+#     url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+# )
