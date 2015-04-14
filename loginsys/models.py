@@ -12,6 +12,6 @@ class MyUser(models.Model):
 class UserFiles(models.Model):
     class Meta():
         db_table = 'name_hash'
-    file_user = models.ForeignKey(MyUser) #TODO:Must be changed to User
+    file_user = models.ForeignKey(MyUser)
     file_name = models.CharField(max_length=200)
     file_hash = models.CharField(max_length=200)

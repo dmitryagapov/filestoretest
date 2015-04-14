@@ -111,7 +111,11 @@ def user_files(request):
 
 
 def delete_file(request, file_hash):
-    user_user = User.objects.get(username=request.session['user'])
+    try:
+        user_user = User.objects.get(username=request.session['user'])
+    except:
+        return redirect('/auth/login/')
+
     user_my = MyUser.objects.get(user=user_user)
     if request.session['user'] == auth.get_user(request).username:
         user_file_for_deleting = UserFiles.objects.filter(file_user=user_my).get(file_hash=file_hash)
@@ -134,7 +138,6 @@ def download_file(request, file_hash, file_name):
 
     return response
 
-    # return redirect('/file/user/')
 
 
 
