@@ -70,9 +70,11 @@ def user_files(request):
 
                 if file_hash == check_user_file.file_hash:
                     request.session['uploaded_file_status'] = ['This file already uploaded with name: %s' % check_user_file.file_name]
+                    newfile.delete()
                     return HttpResponseRedirect(reverse('file.views.user_files'))
                 elif user_file_name == check_user_file.file_name:
                     request.session['uploaded_file_status'] = ['You already have file with such name: %s' % user_file_name]
+                    newfile.delete()
                     return HttpResponseRedirect(reverse('file.views.user_files'))
             except UserFiles.DoesNotExist:
                 pass
@@ -82,12 +84,15 @@ def user_files(request):
                 file = File.objects.get(content=file_hash)
                 file.file_links += 1
                 file.save()
+                newfile.delete()
+                os.remove(settings.MEDIA_ROOT + '/' + newfile.content.name)
             else:
                 request.session['uploaded_file_status'] = ['File is loaded successfully']
                 os.rename(newfile.content.path, MEDIA_ROOT + '/' + file_hash)
                 newfile.content.name = file_hash
                 newfile.file_links += 1
-            newfile.save()
+                newfile.save()
+
             userfile = UserFiles(file_hash=file_hash, file_name=user_file_name, file_user=user_my)
             userfile.save()
 

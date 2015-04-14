@@ -96,6 +96,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    ('static', os.path.join(PROJECT_ROOT, '/filestore/static/')),
+    ('static', os.path.join(BASE_DIR, '/filestore/static/')),
 )
 
