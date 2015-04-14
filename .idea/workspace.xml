@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a3d7d7c-edb5-4f3c-b568-4f48826c156b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/filestore/settings/base.py" afterPath="$PROJECT_DIR$/filestore/settings/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginsys/models.py" afterPath="$PROJECT_DIR$/loginsys/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/file/views.py" afterPath="$PROJECT_DIR$/file/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginsys/views.py" afterPath="$PROJECT_DIR$/loginsys/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/filestore/settings/production.py" afterPath="$PROJECT_DIR$/filestore/settings/production.py" />
     </list>
     <ignored path="filestore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="production.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="production.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/filestore/settings/production.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.44" vertical-offset="164" max-vertical-offset="612">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.28132388" vertical-offset="0" max-vertical-offset="612">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -52,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/filestore/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75886524" vertical-offset="1396" max-vertical-offset="1819">
+            <state vertical-scroll-proportion="-12.84" vertical-offset="1396" max-vertical-offset="1819">
               <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
@@ -153,7 +149,6 @@
         <option value="$PROJECT_DIR$/loginsys/templates/login.html" />
         <option value="$PROJECT_DIR$/loginsys/templates/register.html" />
         <option value="$PROJECT_DIR$/file/templates/files.html" />
-        <option value="$PROJECT_DIR$/filestore/settings/production.py" />
         <option value="$PROJECT_DIR$/loginsys/views.py" />
         <option value="$PROJECT_DIR$/loginsys/models.py" />
         <option value="$PROJECT_DIR$/file/views.py" />
@@ -161,6 +156,7 @@
         <option value="$PROJECT_DIR$/filestore/urls.py" />
         <option value="$PROJECT_DIR$/filestore/wsgi.py" />
         <option value="$PROJECT_DIR$/filestore/settings/base.py" />
+        <option value="$PROJECT_DIR$/filestore/settings/production.py" />
       </list>
     </option>
   </component>
@@ -861,16 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/filestore/settings/production.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.44" vertical-offset="164" max-vertical-offset="612">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/filestore/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="340">
@@ -905,9 +891,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/filestore/settings/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75886524" vertical-offset="1396" max-vertical-offset="1819">
+        <state vertical-scroll-proportion="-12.84" vertical-offset="1396" max-vertical-offset="1819">
           <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/filestore/settings/production.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28132388" vertical-offset="0" max-vertical-offset="612">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
